@@ -6,17 +6,6 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { useColorScheme } from '@/hooks/useColorScheme';
-// Add UXCam
-import RNUxcam from 'react-native-ux-cam';
-RNUxcam.optIntoSchematicRecordings(); // Add this line to enable iOS screen recordings
-const configuration = {
-  userAppKey: '1p4sg1mc29jivt2',
-  enableAutomaticScreenNameTagging: false,
-  enableAdvancedGestureRecognition: true,  // default is true
-  enableImprovedScreenCapture: true, // for improved screen capture on Android
-  occlusions: [],
-}
-RNUxcam.startWithConfiguration(configuration);
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
